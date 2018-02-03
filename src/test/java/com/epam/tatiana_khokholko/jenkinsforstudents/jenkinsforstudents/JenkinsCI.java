@@ -16,7 +16,7 @@ public class JenkinsCI {
 	// Assert.assertTrue(false);
 	// }
 
-	@Test (dependsOnMethods = "failedTest", alwaysRun = true)
+	@Test // (dependsOnMethods = "failedTest", alwaysRun = true)
 	public void helloTest() {
 		System.out.println("Hello CI.");
 	}
