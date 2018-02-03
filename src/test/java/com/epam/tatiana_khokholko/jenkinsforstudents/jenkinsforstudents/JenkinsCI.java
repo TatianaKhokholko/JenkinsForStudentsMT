@@ -10,13 +10,13 @@ public class JenkinsCI {
 		Assert.assertTrue(true);
 	}
 
-	// @Test (dependsOnMethods = "passedTest")
-	// public void failedTest() {
-	// System.out.println("This test failed by default.");
-	// Assert.assertTrue(false);
-	// }
+	@Test(dependsOnMethods = "passedTest")
+	public void failedTest() {
+		System.out.println("This test failed by default.");
+		Assert.assertTrue(false);
+	}
 
-	@Test // (dependsOnMethods = "failedTest", alwaysRun = true)
+	@Test(dependsOnMethods = "failedTest", alwaysRun = true)
 	public void helloTest() {
 		System.out.println("Hello CI.");
 	}
